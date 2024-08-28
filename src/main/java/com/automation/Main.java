@@ -2,11 +2,70 @@ package com.automation;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        System.out.println("Hello and welcome");
+        System.out.println("This is my program");
 
-        //test hello world
-        for (int i = 2; i <= 10; i++){
-            System.out.println("i = " + i);
+        int a = 10;
+        int b = 2;
+        float c = 3;
+        String nama = "Ferdinand";
+        char q = 'Y';
+        boolean flag = false;
+
+        int result = a/b;
+        int result2 = (int) (a+c);
+        float result3 = a+c;
+        System.out.println(result);
+        System.out.println(result2);
+        System.out.println(result3);
+
+        int timeStart = 9;
+        int timeFinish = 18;
+        int waktuMasuk = 7;
+        int waktuPulang = 17;
+
+        if(waktuMasuk <= timeStart && waktuPulang >= timeFinish) {
+            System.out.println("Selamat anda karyawan teladan");
+            System.out.println("Anda sampai " + (timeStart - waktuMasuk) + " jam lebih cepat");
+        } else if(waktuMasuk <= timeStart && waktuPulang < timeFinish){
+            System.out.println("Anda sampai " + (timeStart - waktuMasuk) + " jam lebih cepat");
+            System.out.println("Anda sampai " + (timeFinish- waktuPulang) + " jam lebih cepat");
         }
+    else{
+            System.out.println("Udah telat, pulang duluan");
+        }
+
+    // Switch case
+    int day = 5;
+    switch(day){
+        case 1:
+            System.out.println("Saya WFH");
+            break;
+        case 2:
+            System.out.println("Saya WFH lagi");
+            break;
+        case 3:
+            System.out.println("Saya WFO");
+            break;
+        case 4:
+            System.out.println("Kerja ga ya?");
+            break;
+        default:
+            System.out.println("Saya libur");
+            break;
+    }
+
+    //Loop
+        for(int i=1; i < 10; i = i+2){
+            if(i == 7){
+                break;
+            }
+            System.out.println("Outer Loop " + i);
+
+            for(int j=0; j<=5; j++){
+                System.out.println(j+1);
+            }
+        }
+
     }
 }
